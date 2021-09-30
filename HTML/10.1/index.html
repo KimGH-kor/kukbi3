@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  
+</body>
+<script>
+  //1초뒤에 시작
+  let id = setTimeout(()=>{
+    console.log('1초 후에 실행됩니다.');
+  },1*1000);
+
+  //1초마다 1번씩 시작
+  let count = 0;
+  
+  let id2 = setInterval(()=>{
+    console.log(`1초마다 실행됩니다(${count}번째)`)
+    count++
+  }, 1*1000)
+
+  //setTimeout()함수로 설정한 타이머 5초 뒤 제거
+  setTimeout(()=>{
+    console.log("타이머를 종료합니다.")
+    clearInterval(id2);//setInterval종료
+  },1*5000)
+</script>
+</html>
